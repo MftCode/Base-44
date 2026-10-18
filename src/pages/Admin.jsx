@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import { IconShield } from '../components/Icons.jsx';
 
@@ -119,6 +120,7 @@ export default function Admin() {
 
   return (
     <>
+      <Seo title="مدیریت درخواست‌ها" description="پنل مدیریت درخواست‌های مشاوره پارس بزرگمهر." />
       <PageHero title="پنل مدیریت" sub="مشاهده و مدیریت درخواست‌های مشاوره" crumbs={[{ label: 'مدیریت' }]} />
       <section className="section">
         <div className="container">

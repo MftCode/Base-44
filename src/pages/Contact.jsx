@@ -1,3 +1,4 @@
+import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import ConsultationForm from '../components/ConsultationForm.jsx';
 import { company } from '../data/site.js';
@@ -17,6 +18,7 @@ const info = [
 export default function Contact() {
   return (
     <>
+      <Seo title="تماس با ما" description="راه‌های ارتباطی پارس بزرگمهر و فرم درخواست مشاوره برای استعلام تجهیزات بالابری." />
       <PageHero
         title="تماس با ما"
         sub="برای دریافت مشاوره و استعلام تجهیزات، از راه‌های زیر با پارس بزرگمهر در ارتباط باشید."

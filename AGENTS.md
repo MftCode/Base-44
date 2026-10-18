@@ -36,6 +36,14 @@ rebuild. File-watch polling is enabled for bind mounts.
   the admin panel is reachable with the placeholder — change it before any real
   use.
 
+## Sandbox overrides
+
+- **Vite 5.4 allowedHosts:** Vite 5.4 does not read the
+  `__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS` env var (added in Vite 6.1), so the
+  preview proxy's Host header was rejected with 403. `vite.config.js` sets
+  `server.allowedHosts: true` only when `BASE44_PREVIEW_MODE === '1'` to unblock
+  the sandbox proxy. With the flag unset, the original behavior is preserved.
+
 ## Notes / limitations
 
 - No email notifications are configured. Submitting the form stores the request

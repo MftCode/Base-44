@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
+import Seo from '../components/Seo.jsx';
 import { IconArrow } from '../components/Icons.jsx';
 
 export default function NotFound() {
   return (
+    <>
+    <Seo title="صفحه یافت نشد" description="صفحه موردنظر یافت نشد." />
     <section className="section" style={{ minHeight: '50vh', display: 'flex', alignItems: 'center' }}>
       <div className="container" style={{ textAlign: 'center' }}>
         <div style={{ fontSize: '4rem', fontWeight: 900, color: 'var(--brand)' }}>۴۰۴</div>
@@ -11,5 +14,6 @@ export default function NotFound() {
         <Link to="/" className="btn btn-primary">بازگشت به خانه <IconArrow size={18} /></Link>
       </div>
     </section>
+    </>
   );
 }

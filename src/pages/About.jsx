@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import { company } from '../data/site.js';
 import { IconArrow, IconConsult, IconShield, IconGear, IconHandshake, IconLayers } from '../components/Icons.jsx';
@@ -15,6 +16,7 @@ const approach = [
 export default function About() {
   return (
     <>
+      <Seo title="درباره پارس بزرگمهر" description="معرفی پارس بزرگمهر، تأمین‌کننده تجهیزات بالابری صنعتی با ۳۵ سال تجربه در حوزه بالابر." />
       <PageHero
         title="درباره پارس بزرگمهر"
         sub="تجربه در مسیر تأمین تجهیزات بالابری صنعتی."
