@@ -35,7 +35,7 @@ export default function Header() {
           <nav className="nav" aria-label="منوی اصلی">
             {nav.map((item) => item.drop ? (
               <div className="has-drop" key={item.to}>
-                <NavLink to={item.to} className="nav-link drop-toggle" activeClassName="active">
+                <NavLink to={item.to} className={({ isActive }) => `nav-link drop-toggle${isActive ? ' active' : ''}`}>
                   {item.label} <IconChevron size={15} />
                 </NavLink>
                 <div className="drop-menu">
@@ -47,7 +47,7 @@ export default function Header() {
                 </div>
               </div>
             ) : (
-              <NavLink key={item.to} to={item.to} end={item.to === '/'} className="nav-link" activeClassName="active">
+              <NavLink key={item.to} to={item.to} end={item.to === '/'} className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
                 {item.label}
               </NavLink>
             ))}
@@ -71,7 +71,7 @@ export default function Header() {
         </div>
         <nav>
           {nav.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.to === '/'} className="mm-link" activeClassName="active">
+            <NavLink key={item.to} to={item.to} end={item.to === '/'} className={({ isActive }) => `mm-link${isActive ? ' active' : ''}`}>
               {item.label}
             </NavLink>
           ))}
