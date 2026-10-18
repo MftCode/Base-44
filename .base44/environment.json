@@ -1,0 +1,13 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "ADMIN_PASSWORD",
+      "description": "Password protecting the /admin panel that lists consultation requests. A development placeholder (admin12345) is committed in .env.base44-defaults; set a strong real value in the dashboard to override it.",
+      "requiredAtBoot": false,
+      "generatedForDevelopment": false
+    }
+  ]
+}
